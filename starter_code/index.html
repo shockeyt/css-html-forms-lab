@@ -128,6 +128,7 @@
 	    	// Append the new <section> created above.
 	    	makeResults();
 	    	// makeStory();
+
 	    	var name = $("#name").val();
 		var sentence1 = "Once upon a time there was a Developer named " + name + ".";
 		$('.results').append(sentence1);
@@ -135,6 +136,21 @@
 		var verb1 = $("#verb-1").val();
 		var sentence2 = "  " + name + " came to General Assembly to " + verb1 + " the great mountain of programming knowledge.";
 		$('.results').append(sentence2);
+
+		var mission = $("#mission").val();
+		var sentence3 = "  " + mission + ", " + name + " shouted.";
+		$('.results').append(sentence3); 
+
+		var sentiment = $("input[type=radio][name=sentiment]:checked").val();
+		var noun = $("#noun-1").val();
+		var sentence4 = "  Though " + sentiment + ", " + name + " was able to overcome all obstacles with the power of their " + noun + ".";
+		$('.results').append(sentence4);
+
+		var noun2 = $("#noun-2").val();
+		var adjectives = $("input[type=checkbox][name=adjective-2]:checked").val();
+		var sentence5 = "In the end, their success can be contributed entirely to their " + adjectives + " " + noun2 + ".";
+		$('.results').append(sentence5); 
+
 	    	/*
 			
 				For each value entered into a form input, add the input to the corresponding sentence, then append the text into the results section:
