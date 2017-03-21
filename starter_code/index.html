@@ -34,7 +34,7 @@
 				    	</select>
 					</div>
 					<div class="row formGroup">
-				    	<label for="mission">Misison Statement:</label>
+				    	<label for="mission">Misson Statement:</label>
 				    	<textarea id="mission" name="mission"></textarea>
 					</div>
 
@@ -111,18 +111,25 @@
 			Don't append it until the form has been submitted.
 
 		*/
-
+		var story = document.createElement('p');
+		function makeStory() {
+			// var trueStory = document.getElementsByClassName('.results');
+			story.innerText = "Once upon a time there was a Developer named NAME.";
+			story.className = 'story';
+			main.appendChild(story);
+		}
 
 		$("form").on("submit", function(event){
 
 		    // Stop the form from submitting
-
+		    event.preventDefault();
 	    	// Append the new <section> created above.
-
+	    	makeResults();
+	    	makeStory();
 	    	/*
 			
 				For each value entered into a form input, add the input to the corresponding sentence, then append the text into the results section:
-
+		
 				"Once upon a time there was a Developer named NAME."
 
 				"NAME came to General Asssembly to VERB1 the great mountain of programming knowledge."
@@ -134,6 +141,7 @@
 				"In the end, their success can be contributed entirely to their " + ADJECTIVE2[list each one checked, comma-separated] + NOUN2."
 
 	    	*/ 
+
 		});
 	</script>
 
