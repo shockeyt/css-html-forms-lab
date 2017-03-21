@@ -146,9 +146,23 @@
 		var sentence4 = "  Though " + sentiment + ", " + name + " was able to overcome all obstacles with the power of their " + noun + ".";
 		$('.results').append(sentence4);
 
+
+
 		var noun2 = $("#noun-2").val();
-		var adjectives = $("input[type=checkbox][name=adjective-2]:checked").val();
-		var sentence5 = "In the end, their success can be contributed entirely to their " + adjectives + " " + noun2 + ".";
+		var array = [];
+		var adjectives = $('input[name="adjective-2"]:checked').map(function(){
+			array.push($(this).val());
+		});
+		// var check1 = $("#check1").val();
+		// var check2 = $("#check2").val();
+		// var check3 = $("#check3").val();
+		
+		
+		console.log(array);
+		// array.push(check1);
+		// array.push(check2);
+		// array.push(check3);
+		var sentence5 = "  In the end, their success can be contributed entirely to their " + array + " " + noun2 + ".";
 		$('.results').append(sentence5); 
 
 	    	/*
