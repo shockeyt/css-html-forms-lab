@@ -111,13 +111,15 @@
 			Don't append it until the form has been submitted.
 
 		*/
-		var story = document.createElement('p');
-		function makeStory() {
-			// var trueStory = document.getElementsByClassName('.results');
-			story.innerText = "Once upon a time there was a Developer named NAME.";
-			story.className = 'story';
-			main.appendChild(story);
-		}
+		// var story = document.createElement('p');
+		// function makeStory() {
+		// 	// var trueStory = document.getElementsByClassName('.results');
+		// 	story.innerText = "Once upon a time there was a Developer named " + name + ".";
+		// 	story.className = 'story';
+		// 	main.appendChild(story);
+		// }
+
+		
 
 		$("form").on("submit", function(event){
 
@@ -125,7 +127,14 @@
 		    event.preventDefault();
 	    	// Append the new <section> created above.
 	    	makeResults();
-	    	makeStory();
+	    	// makeStory();
+	    	var name = $("#name").val();
+		var sentence1 = "Once upon a time there was a Developer named " + name + ".";
+		$('.results').append(sentence1);
+
+		var verb1 = $("#verb-1").val();
+		var sentence2 = "  " + name + " came to General Assembly to " + verb1 + " the great mountain of programming knowledge.";
+		$('.results').append(sentence2);
 	    	/*
 			
 				For each value entered into a form input, add the input to the corresponding sentence, then append the text into the results section:
