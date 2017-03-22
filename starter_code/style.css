@@ -19,7 +19,7 @@
 	background-color: #E3E6EC;
 	float: left;
 	border-radius: 5px;
-	padding: 10px;
+	padding: 0 15px;
 }
 .container.results {
 	width: 50%;
@@ -47,6 +47,7 @@ h1 {
 /*-------- Form Styles --------*/
 #name, #mission, #noun-1, #noun-2, #verb-1 {
 	margin-top: 10px;
+	border: 1px solid #CCC;
 }
 
 #name, #mission, #noun-1, #noun-2 {
@@ -55,14 +56,14 @@ h1 {
 	display: inline-block;
 }
 #name, #noun-1, #noun-2, #verb-1 {
-	height: 40px;
+	height: 50px;
 }
 #verb-1 {
 	display: block;
 	width: 100%;
 }
 #mission {
-	height: 80px;
+	height: 100px;
 }
 .row {
 	padding: 20px 0;
@@ -79,6 +80,20 @@ label {
 }
 .radioButtons, .checkboxes {
 	padding-left: 10px;
+}
+#submit {
+	background-color: rgba(39, 208, 127, 0.5);
+	transition: background .25s ease-in-out;
+	font-family: 'Proza Libre', sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 16px;
+    float: right;
+}
+#submit:hover {
+	background-color: rgba(39, 208, 127, 1);
 }
 /* 
 
