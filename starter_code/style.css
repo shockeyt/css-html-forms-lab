@@ -3,6 +3,7 @@
 	box-sizing: border-box; 
 	/* ^^^ Forces all elements to include content, padding, and border as part of their width/height calculation: 
 	http://www.w3schools.com/cssref/css3_pr_box-sizing.asp */
+	font-family: 'Proza Libre', sans-serif;
 }
 
 /* 
@@ -12,7 +13,26 @@
 */
 
 /*-------- Main Styles --------*/
-
+.formSection.container {
+	width: 50%;
+	max-width: 500px;
+	background-color: #E3E6EC;
+	float: left;
+	border-radius: 5px;
+	padding: 10px;
+}
+.container.results {
+	width: 50%;
+	background-color: #C8DBB3;
+	float: right;
+	border-radius: 5px;
+}
+h1 {
+	font-size: 30px;
+	font-weight: 700;
+	margin-left: 20px;
+	margin-top: 25px;
+}
 /* 
 	Make the main container the full width of the page.
 
@@ -20,10 +40,46 @@
 
 	Every container, form, input, and button should have rounded corners.
 */
-
+#main {
+	width: 100%;
+	background-color: lightblue;
+}
 /*-------- Form Styles --------*/
+#name, #mission, #noun-1, #noun-2, #verb-1 {
+	margin-top: 10px;
+}
 
-
+#name, #mission, #noun-1, #noun-2 {
+	border-radius: 5px;
+	width: 100%;
+	display: inline-block;
+}
+#name, #noun-1, #noun-2, #verb-1 {
+	height: 40px;
+}
+#verb-1 {
+	display: block;
+	width: 100%;
+}
+#mission {
+	height: 80px;
+}
+.row {
+	padding: 20px 0;
+}
+.row.formGroup {
+	width: 100%;
+	display: inline-block;
+}
+label {
+	padding: 20px 0;
+}
+.radioButtons, .radio, .checkboxes, .check {
+	padding: 10px 0;
+}
+.radioButtons, .checkboxes {
+	padding-left: 10px;
+}
 /* 
 
 	Make sure the form itself fills the width of whatever container its in, but no larger than 500px.
