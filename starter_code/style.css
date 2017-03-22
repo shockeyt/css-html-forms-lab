@@ -23,9 +23,13 @@
 }
 .container.results {
 	width: 50%;
+	max-width: 500px;
 	background-color: #C8DBB3;
 	float: right;
 	border-radius: 5px;
+	padding-bottom: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 h1 {
 	font-size: 30px;
@@ -42,12 +46,14 @@ h1 {
 */
 #main {
 	width: 100%;
-	background-color: lightblue;
+	max-width: 1024px;
+	background-color: lightblue;	
 }
 /*-------- Form Styles --------*/
 #name, #mission, #noun-1, #noun-2, #verb-1 {
 	margin-top: 10px;
 	border: 1px solid #CCC;
+	font-size: 15px;
 }
 
 #name, #mission, #noun-1, #noun-2 {
@@ -94,6 +100,25 @@ label {
 }
 #submit:hover {
 	background-color: rgba(39, 208, 127, 1);
+}
+/*PLACEHOLDER STYLES*/
+#name::-webkit-input-placeholder {
+	font-size: 14px;
+	color: rgba(39, 208, 127, 0.5);
+
+}
+#mission::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+	font-size: 14px;
+	color: rgba(39, 208, 127, 0.5);
+}
+#noun-1::-webkit-input-placeholder {
+	font-size: 14px;
+	color: rgba(39, 208, 127, 0.5);
+}
+#noun-2::-webkit-input-placeholder {
+	font-size: 14px;
+	color: rgba(39, 208, 127, 0.5);
 }
 /* 
 
